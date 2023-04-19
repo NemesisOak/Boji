@@ -1,7 +1,8 @@
 #!/usr/bin/env python
+from imp import load_module
 import tensorflow as tf
 from tensorflow import keras
-from keras import load_model
+#from keras import load_model
 import cv2 
 import numpy as np #importado para as edições na imagem
 import mediapipe as mp
@@ -17,6 +18,7 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 
 #Keras 
+model = keras.models.load_model(r"C:\Users\lauzi\OneDrive\Documents\Projeto de Pesquisa 2022\Teachable Machine\keras_model.h5")
 np.set_printoptions(suppress=True)
 model = load_model("keras_Model.h5", compile=False) #Este é o modelo que será importado
 class_names = open("labels.txt", "r").readlines()
