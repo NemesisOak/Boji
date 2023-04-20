@@ -2,7 +2,7 @@
 from imp import load_module
 import tensorflow as tf
 from tensorflow import keras
-#from keras import load_model
+import keras
 import cv2 
 import numpy as np #importado para as edições na imagem
 import mediapipe as mp
